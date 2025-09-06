@@ -110,9 +110,9 @@ export default function Converter() {
         setter={handleToChange}
       />
       {convertLoading ? (
-        <div>Conversion loading...</div>
+        <h2>Conversion loading...</h2>
       ) : (!!from && !!to && !!amount) === false ? (
-        <div>Please use in the inputs above to convert currency</div>
+        <h2>Please use in the inputs above to convert currency</h2>
       ) : (amount || convertData.response.value) < 1000000000 ? (
         <h2>
           {amount} {from} = {convertData.response.value.toFixed(2)} {to}
